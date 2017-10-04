@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  div(class="img-wrapper")
+    each val in [1, 2, 3, 4, 5,6]
+      span(class=`img-class-${val}`)
+        img(src=`/images/${val}.jpg`)
+  // img(src="/images/1.jpg")
+  // img(src="/images/2.jpg")
+  // img(src="/images/3.jpg")
+  // img(src="/images/4.jpg")
+  // img(src="/images/5.jpg")
+  // img(src="/images/6.jpg")

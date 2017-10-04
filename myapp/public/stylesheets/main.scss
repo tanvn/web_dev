@@ -1,0 +1,135 @@
+@import "bootstrap";
+
+$img_size : 200;
+
+
+@mixin base_number() {
+	    position: absolute;
+	    bottom: 8px;
+	    left: 16px;
+	    font-size: 40px;
+	    /*z-index: 100;*/
+	    color: #6eb454;
+}
+
+body {
+	padding: 0;
+}
+.img-wrapper {
+	max-width: 1200px;
+
+}
+.img-class-1 {
+/*	border : 2px solid red;*/
+	position: relative;
+}
+
+.img-class-2 {
+/*	border : 2px solid red;*/
+	position: relative;
+	@media screen and (max-width: $img_size * 2 - 1px) {
+		img{ display: none }
+	}
+}
+
+.img-class-3 {
+	position: relative;
+	@media screen and (max-width: $img_size * 3 - 1px) {
+		img{ display: none }
+	}
+
+}
+
+.img-class-4 {
+/*	border : 2px solid red;*/
+	position: relative;
+	@media screen and (max-width: $img_size * 4 - 1px) {
+		img{ display: none }
+	}
+
+}
+
+
+.img-class-5 {
+/*	border : 2px solid red;*/
+	position: relative;
+	@media screen and (max-width: $img_size * 5 - 1px) {
+		img {
+			display: none
+		}
+	}
+
+}
+
+.img-class-6 {
+	/*border : 2px solid red;*/
+	position: relative;
+	@media screen and (max-width: $img_size *6 - 1px) {
+		img {
+			display: none
+		}
+	}
+}
+
+
+@media (max-width: 200px){
+
+}
+
+@media screen and (max-width: $img_size *3px) and (min-width: $img_size * 2px) {
+    .img-class-2:after {
+				content: "+4";
+				display: inline;
+				@include base_number();
+				}
+
+   .img-class-2 {
+		img {
+			opacity: 0.5;
+		}
+	}
+}
+
+@media screen and (max-width: $img_size *4px) and (min-width: $img_size * 3px) {
+    .img-class-3:after {
+				content: "+3";
+				display: inline;
+				@include base_number();
+				}
+
+	.img-class-3 {
+		img {
+			opacity: 0.5;
+		}
+	}
+}
+
+@media screen and (max-width: $img_size *5px) and (min-width: $img_size * 4px) {
+    .img-class-4:after {
+				content: "+2";
+				display: inline;
+				@include base_number();
+			}
+	.img-class-4 {
+		img {
+			opacity: 0.5;
+		}
+	}
+}
+
+@media screen and (max-width: $img_size *6 - 1px) and (min-width: $img_size * 5px) {
+    .img-class-5:after {
+				content: "+1";
+				display: inline;
+				@include base_number();
+			}
+	.img-class-5 {
+		img {
+			opacity: 0.5;
+		}
+	}
+}
+
+
+
+
